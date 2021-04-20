@@ -1,0 +1,20 @@
+define([],function(){
+    return{
+        "rushikesh":{
+            hello:"Hello",
+            name:"Rushikesh"
+        },
+        "pranav":{
+            hello:"Hello",
+            name:"Pranav"
+        },
+        "subhendhuu":{
+            hello:"Hello",
+            name:"Subhendhu"
+        },
+        "rashmi":{
+            hello:"Hello",
+            name:"Rashmi Ranjan"
+        }
+    }
+})

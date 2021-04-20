@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>
+     ASSIGNMENT 1
+ </title>
+ <script type="text/javascript" data-main="jsfiles/main" src="http://requirejs.org/docs/release/2.3.2/minified/require.js"></script>
+</head>
+<body>
+ 
+ <script> 
+requirejs(["firstcode"], function(greet) {
+ alert(greet.hello());
+ });
+ requirejs(["nestedexample"],function(greet){
+     console.log(greet.hello1('rushikesh'))
+     console.log(greet.hello1('pranav'))
+     console.log(greet.hello1('subhendhuu'))
+     console.log(greet.hello1('rashmi'))
+ })
+
+ requirejs(["jquery","firstcode"], function( $,greet) {
+    var $body = $('body');
+    $body.append( $('<h1/>').text(greet.hello()) );
+    
+ })
+
+ requirejs(["jquery" ,"nestedexample"], function($, greet) {
+    var $body = $('body');
+    $body.append( $('<p/>').text(greet.hello1("rushikesh")) );
+    $body.append( $('<p/>').text(greet.hello1("pranav")) );
+    $body.append( $('<p/>').text(greet.hello1("subhendhuu")) );
+    $body.append( $('<p/>').text(greet.hello1("rashmi")) );
+    // $('<p/>').attr('class',"text-danger") 
+});
+ 
+ //nested example 
+  </script>
+
+<!-- <script>
+    requirejs(["jquery", "nestedexample"], function($, greet) {
+    var $body = $('body');
+    $body.append( $('<p/>').text(greet.hello("rushikesh")) );
+    $body.append( $('<p/>').text(greet.hello("pranav")) );
+    $body.append( $('<p/>').text(greet.hello("subhendhuu")) );
+    $body.append( $('<p/>').text(greet.hello("rashmi")) );
+
+});
+</script> -->
+</body>
+</html>
